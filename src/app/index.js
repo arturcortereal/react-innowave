@@ -16,7 +16,7 @@ const App = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-lg-12 col-sm-3 text-center">
+                <div className="col-lg-12 col-sm-3">
                     <h1>Hello, world!</h1>
                     <Router>
                         <div>
