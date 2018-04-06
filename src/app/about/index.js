@@ -1,20 +1,21 @@
 import { connect } from 'react-redux';
 
 import { actions } from '@state';
-import Presentational from './presentational';           // we import the presentational component here
+import presentational from './presentational';           // we import the presentational component here
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state, ownProps) => ({
     counter: state.counter,
 });
 
 const mapDispatchToProps = {
     decrement: actions.counterActions.Decrement,
-    increment: actions.counterActions.Increment
+    increment: actions.counterActions.Increment,
+    loadRequest: actions.counterActions.LoadRequest
 };
 
 const About = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Presentational);
+)(presentational);
 
 export default About;
